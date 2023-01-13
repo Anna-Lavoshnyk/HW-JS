@@ -2,8 +2,8 @@
 // let weight = "88.3";
 // let height = "1.75";
 
-// const bmi = Number(weight / Math.pow(height, 2));
-// console.log(bmi); // 28.8
+// const bmi = Number(weight) / Math.pow(Number(height), 2);
+// console.log(bmi.toFixed(1)); // 28.8
 
 //-----------------------------------
 
@@ -25,16 +25,19 @@
 // 450 покаже 07:30
 // 1441 покаже 24:01
 
-//const totalMinutes = 70;
+function totalMinutes(mins) {
+  let hours = Math.floor(mins / 60);
+  let minutes = mins % 60;
+  //   return hours + ":" + minutes;
+  return `${addPadStart(hours)}:${addPadStart(minutes)}`;
+}
+function addPadStart(num) {
+  return num.toString().padStart(2, "0");
+}
+console.log(totalMinutes(70));
+console.log(totalMinutes(450));
+console.log(totalMinutes(1441));
 
-// function totalMinutes(mins) {
-//   let hours = Math.trunc(mins / 60);
-//   let minutes = mins % 60;
-//   return hours + ":" + minutes;
-// }
-// console.log(totalMinutes(70));
-// console.log(totalMinutes(450));
-// console.log(totalMinutes(1441));
 //-----------------------------------
 
 /*
@@ -52,25 +55,25 @@
 
 // let a = prompt();
 // let b = prompt();
-// c = Number(a) + Number(b);
+// let c = Number(a) + Number(b);
 // console.log(c);
 
 // let a = Number(prompt());
 // let b = Number(prompt());
-// c = a - b;
+// let c = a - b;
 // console.log(c);
 
 // let a = Number(prompt());
 // let b = Number(prompt());
-// c = a * b;
+// let c = a * b;
 // console.log("*", c);
 
 // let a = prompt();
 // let b = prompt();
-// c = Number(a) / Number(b);
+// let c = Number(a) / Number(b);
 // console.log(c);
 
 // let a = prompt();
 // let b = prompt();
-// c = Number(a) % Number(b);
+// let c = Number(a) % Number(b);
 // console.log("%", c);
