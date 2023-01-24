@@ -114,21 +114,19 @@ function input() {
   const firstNumber = prompt("Введите первое число");
   const secondNumber = prompt("Введите второе число");
   const operator = prompt("Введите оператор");
-
-  function calc() {
-    let result;
-    if (operator === "+") {
-      result = Number(firstNumber) + Number(secondNumber);
-    }
-    if (operator === "-") {
-      result = Number(firstNumber) - Number(secondNumber);
-    }
-    if (operator === "*") {
-      result = Number(firstNumber) * Number(secondNumber);
-    }
-    if (operator === "/") {
-      result = Number(firstNumber) / Number(secondNumber);
-    }
-    return result;
+  let result;
+  if (operator === "+") {
+    result = Number(firstNumber) + Number(secondNumber);
   }
+  if (operator === "-") {
+    result = Number(firstNumber) - Number(secondNumber);
+  }
+  if (operator === "*") {
+    result = Number(firstNumber) * Number(secondNumber);
+  }
+  if (operator === "/") {
+    result = Number(firstNumber) / Number(secondNumber);
+  }
+  console.log(result);
 }
+input();
